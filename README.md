@@ -14,3 +14,12 @@ Hybrid quantum oracle combining custom VQE with QAOA, VQF, QGANs, QSVM, QPE, Kry
 
 ## Usage
 Call endpoints like /hybrid_vqe_qaoa with JSON payload (e.g., Hamiltonian matrix).
+
+## Dynamic QPU Selection
+The oracle automatically picks providers (IBM, AWS Braket, Azure, Google) and modes in priority order:
+1. Classical-only (no quantum, always free)
+2. Classical-quantum hybrid (simulated quantum)
+3. Free full QPU (if available via your keys)
+4. Paid full QPU (billed to your account)
+
+It checks for your keys and falls back if missing. Use FORCE_FREE_QPU=true in .env to prioritize free tiers.
