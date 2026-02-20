@@ -4,6 +4,10 @@ import quantum_oracle as qo  # Import your core module
 
 app = FastAPI(title="Grok & Wayne's Quantum Oracle")
 
+@app.get("/")
+def read_root():
+    return {"message": "Grok & Wayne's Quantum Oracle is live! Use POST to /oracle with JSON payload."}
+
 class Request(BaseModel):
     mode: str  # e.g., "vqe_qaoa"
     params: dict  # Problem-specific (H, p, etc.)
