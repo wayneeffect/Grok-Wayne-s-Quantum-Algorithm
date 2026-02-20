@@ -23,3 +23,6 @@ The oracle automatically picks providers (IBM, AWS Braket, Azure, Google) and mo
 4. Paid full QPU (billed to your account)
 
 It checks for your keys and falls back if missing. Use FORCE_FREE_QPU=true in .env to prioritize free tiers.
+
+## Render
+https://grok-wayne-s-quantum-algorithm.onrender.com/
