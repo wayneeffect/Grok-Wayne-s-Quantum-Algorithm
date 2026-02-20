@@ -6,6 +6,27 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+# In get_device() or before QPU call
+if mode == "full" and FORCE_FREE_QPU:
+    # Force simulator fallback for "free" providers
+    if provider == "ibm":
+        return qml.device("qiskit.ibmq", wires=wires, ibmqx_token=IBMQ_TOKEN, backend="ibmq_qasm_simulator")
+    # ... similar for others
+    print("Falling back to simulator for free mode")
+    mode = "hybrid"  # or "classic"
+
+# Add a global call counter (simple in-memory for prototype)
+CALL_COUNT = 0
+MAX_FREE_CALLS_PER_DAY = 50  # arbitrary limit
+
+def run_oracle(...):
+    global CALL_COUNT
+    CALL_COUNT += 1
+    if CALL_COUNT > MAX_FREE_CALLS_PER_DAY:
+        print("Daily free call limit reached — forcing hybrid mode")
+        mode = "hybrid"
+    # ... continue
+
 # Provider keys/config from .env (users fill their own)
 IBMQ_TOKEN = os.getenv("IBMQ_TOKEN")
 AWS_REGION = os.getenv("AWS_REGION")
