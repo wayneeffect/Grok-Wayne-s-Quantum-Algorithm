@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+pennylane
+pennylane-qiskit  # For IBM
+pennylane-braket  # For AWS Braket
+pennylane-azure  # For Azure
+scipy  # For polyharmonic splines
+numpy
+python-dotenv
