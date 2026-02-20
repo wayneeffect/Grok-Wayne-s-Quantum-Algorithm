@@ -1,9 +1,8 @@
 fastapi
 uvicorn
 pennylane
-pennylane-qiskit  # For IBM
-pennylane-braket  # For AWS Braket
-pennylane-azure  # For Azure
-scipy  # For polyharmonic splines
+pennylane-qiskit
+amazon-braket-pennylane-plugin
+scipy
 numpy
 python-dotenv
