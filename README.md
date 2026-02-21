@@ -26,3 +26,24 @@ It checks for your keys and falls back if missing. Use FORCE_FREE_QPU=true in .e
 
 ## Render
 https://grok-wayne-s-quantum-algorithm.onrender.com/
+
+## Grok & Wayne's Quantum Algorithm/Oracle features:
+Timeline/Feed Ranking
+Content Moderation/Spam Detection
+User Recommendations/Follow Suggestions
+Search Optimization
+Post Validation/Verification
+Generative Content (e.g., AI Summaries/Avatars)
+Phase Estimation for Dynamic Features (e.g., Trend Prediction)
+
+## Quantum Blockchain (Quantum Resistant Ledger (QRL) 2.0/Project Zond) features:
+Immutable Post Archiving
+Verified Post Signatures
+Quantum-Resistant Likes/Boosts
+Tamper-Proof Timelines
+Decentralized Profile Data
+Audit Trail for Moderation
+Quantum-Signed DMs
+Tokenized Community Badges
+
+Fallback Logic (e.g., retry on failure) for Grok & Wayne's Quantum Algorithm/Oracle and Quantum Blockchain (Quantum Resistant Ledger (QRL) 2.0/Project Zond).
